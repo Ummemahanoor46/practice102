@@ -2,7 +2,7 @@ Feature: Login Feature
   @regression
   Scenario: User should be able to login with valid email and valid password
     Given user in TalentTEK Homepage
-    And user enter vaild email address
+    And user enter valid email address
     And user enter valid password
     When user clicks on login button
     Then the user should be able to login successfully

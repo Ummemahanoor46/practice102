@@ -3,6 +3,7 @@ package base;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.safari.SafariOptions;
 
@@ -14,8 +15,10 @@ public class config {
     public static WebDriver setupBrowser (String driverType){
         if(driverType.equalsIgnoreCase("ch")){
             driver = new ChromeDriver();
-        } else if (driverType.equalsIgnoreCase("ff")){
+        } else if (driverType.equalsIgnoreCase("ff")) {
             driver = new FirefoxDriver();
+        } else if (driverType.equalsIgnoreCase("ie")){
+            driver = new InternetExplorerDriver();
         } else if (driverType.equalsIgnoreCase("safari")){
             SafariOptions options = new SafariOptions();
             options.setUseTechnologyPreview(true);

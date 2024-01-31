@@ -10,8 +10,8 @@ public class loginsteps {
     public void userInTalentTEKHomepage() {
     }
 
-    @And("user enter vaild email address")
-    public void userEnterVaildEmailAddress() {
+    @And("user enter valid email address")
+    public void userEnterValidEmailAddress() {
     }
 
     @And("user enter valid password")
@@ -25,4 +25,6 @@ public class loginsteps {
     @Then("the user should be able to login successfully")
     public void theUserShouldBeAbleToLoginSuccessfully() {
     }
+
+
 }
