@@ -11,7 +11,8 @@ import java.time.Duration;
 
 public class config {
     public static WebDriver driver;
-
+    public static String STUDENT_EMAIL;
+    public static String STUDENT_PASSWORD;
     public static WebDriver setupBrowser (String driverType){
         if(driverType.equalsIgnoreCase("ch")){
             driver = new ChromeDriver();

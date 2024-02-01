@@ -11,8 +11,7 @@ public class Hook extends config {
     public static String envType = System.getProperty("env");
     public static String browserType = System.getProperty("browser");
 
-    public static String STUDENT_EMAIL;
-    public static String STUDENT_PASSWORD;
+
     @Before
     public void beforeEachTest(){
         if (Strings.isNullOrEmpty(envType)){
@@ -43,7 +42,7 @@ public class Hook extends config {
 
     @After
     public void afterEachTest(){
-        driver.quit();
+        //driver.quit();
         // take screenshot if test steps or case fail
         // close db connection
     }

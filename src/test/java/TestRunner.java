@@ -9,5 +9,5 @@ import io.cucumber.testng.CucumberOptions;
         }
         // Specify the desired plugins (e.g., pretty, html, json, etc.)
 )
-public class TestRunner extends AbstractTestNGCucumberTests {
+public class TestRunner extends AbstractTestNGCucumberTests{
 }
