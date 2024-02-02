@@ -6,13 +6,13 @@ Feature: Login Feature
     And user enter valid password
     When user clicks on login button
     Then the user should be able to login successfully
-#  @regression
-#  Scenario: User should be able to login with invalid email and invalid password
-#    Given user in TalentTEK Homepage
-#    And user enter invaild email address
-#    And user enter invalid password
-#    When user clicks on login button
-#    Then user should see "Invalid email address" error message.
+  @regression
+  Scenario: User should be able to login with invalid email and invalid password
+    Given user in TalentTEK Homepage
+    And user enter invalid email address
+    And user enter invalid password
+    When user clicks on login button
+    Then user should see "Invalid email address" error message.
 #
 #  Scenario: User should not be able to login with valid email and invalid password
 #    Given user in TalentTEK Homepage

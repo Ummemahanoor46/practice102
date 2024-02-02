@@ -20,7 +20,7 @@ public class config {
             driver = new FirefoxDriver();
         } else if (driverType.equalsIgnoreCase("ie")){
             driver = new InternetExplorerDriver();
-        } else if (driverType.equalsIgnoreCase("safari")){
+        } else if (driverType.equalsIgnoreCase("sf")){
             SafariOptions options = new SafariOptions();
             options.setUseTechnologyPreview(true);
             driver = new SafariDriver(options);

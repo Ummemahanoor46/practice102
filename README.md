@@ -1,23 +1,29 @@
 # practice102
 TALENTTEK PROJECT: TEST 
-Java, Cucumber, TestNG, JVM, Git ect
+Java, Cucumber, TestNG, JVM, Git etc
+
 # Project owner
 UMME MAHANOOR 
 
 # To fix code
 CTL+A
 CTL+ALT+L
+
 # Pre condition
 IntelliJ IDE - to write code (community edition)
 We need java at least 17 or above
 we need Maven to compile test (run our test)
 we Git account - to store code
+
 # Dependencies
-testng
-cucumber jvm java
+cucumber-testng
+cucumber-java
+selenium-java
+
 # Plugins in IntelliJ
 Cucumber for Java
 Gherkin
+
 # How to run the test?
 TBD - TO BE DECIDED
 
