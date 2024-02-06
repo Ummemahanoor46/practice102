@@ -24,13 +24,13 @@ public class Hook extends config {
         switch (envType){
             case "qa":
                 url = "https://qa.taltektc.com";
-                STUDENT_EMAIL = "qa.env@gmail.com";
-                STUDENT_PASSWORD = "1234567890";
+                STUDENT_EMAIL = "chromicumme+1@gmail.com";
+                STUDENT_PASSWORD = "TESTpassword99";
                 break;
             case "stage":
                 url = "https://stage.taltektc.com";
-                STUDENT_EMAIL = "stage.env@gmail.com";
-                STUDENT_PASSWORD = "stagePas$123";
+                STUDENT_EMAIL = "chromicumme+1@gmail.com";
+                STUDENT_PASSWORD = "TESTpassword99";
                 break;
             case "prod":
                 url = "https://prod.taltektc.com";

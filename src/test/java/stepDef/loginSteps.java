@@ -28,8 +28,45 @@ public class loginSteps extends config {
     }
     @Then("the user should be able to login successfully")
     public void theUserShouldBeAbleToLoginSuccessfully() {
-        String businessAct = "Student Information";
+        String expText = "Student Information";
         String developerCodeExp = driver.findElement(By.xpath("//h2[@class='d-inline info']")).getText();
-        Assert.assertEquals (businessAct, developerCodeExp);
+        Assert.assertEquals (expText, developerCodeExp);}
+    @And("user enter invalid email address")
+    public void userEnterInvalidEmailAddress() { driver.findElement(By.name("email")).sendKeys("wrongeamil@gmail.com");}
+    @And("user enter invalid password")
+    public void userEnterInvalidPassword() { driver.findElement(By.name("password")).sendKeys("wrongpassword");}
+
+    @Then("user should see {string} error message.")
+    public void userShouldSeeErrorMessage(String arg0) throws InterruptedException {
+        String expText = "Invalid email address";
+        Thread.sleep(1000);
+        String actText = driver.findElement(By.id("error-msg")).getText();
+        Assert.assertEquals (expText, actText);
+    }
+    @And("user submit email address and password field empty")
+    public void userSubmitEmailAddressAndPasswordFieldEmpty() {
+        driver.findElement(By.name("email")).sendKeys("");
+        driver.findElement(By.name("password")).sendKeys("");
+
+    }
+    @And("User enter the username with a mix of uppercase and lowercase characters")
+    public void userEnterTheUsernameWithAMixOfUppercaseAndLowercaseCharacters() {
+        driver.findElement(By.name("email")).sendKeys("CHROMICumme+1@GMAIL.COM");
+        driver.findElement(By.name("password")).sendKeys(STUDENT_PASSWORD);
+
+    }
+    @And("User enter the password with a mix of uppercase and lowercase characters")
+    public void userEnterThePasswordWithAMixOfUppercaseAndLowercaseCharacters() {
+        driver.findElement(By.name("email")).sendKeys(STUDENT_EMAIL);
+        driver.findElement(By.name("password")).sendKeys("TEstPASSWORD99");
+    }
+
+    @Then("user should find {string} error message.")
+    public void userShouldFindErrorMessage(String arg0) throws InterruptedException {
+        String expText = "Incorrect email or password";
+        Thread.sleep(1000); // Selenium move to fast
+        String actText = driver.findElement(By.xpath("//*[@id='error-msg']")).getText();
+        Assert.assertEquals (expText, actText);
     }
 }
+
