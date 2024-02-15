@@ -13,6 +13,7 @@ public class config {
     public static WebDriver driver;
     public static String STUDENT_EMAIL;
     public static String STUDENT_PASSWORD;
+
     public static WebDriver setupBrowser (String driverType){
         if(driverType.equalsIgnoreCase("ch")){
             driver = new ChromeDriver();
@@ -25,9 +26,11 @@ public class config {
             options.setUseTechnologyPreview(true);
             driver = new SafariDriver(options);
         }
+
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         return driver;
     }
+
 }
 

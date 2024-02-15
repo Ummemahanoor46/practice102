@@ -83,6 +83,11 @@ public class loginSteps extends config {
         String actText = driver.findElement(By.xpath("//*[@id='error-msg']")).getText();
         Assert.assertEquals(expText, actText);
     }
-    
+
+    @Then("User should see {string} message.")
+    public void userShouldSeeMessage(String arg0) {
+        driver.switchTo().alert().getText();
+    }
+
 }
 

@@ -53,3 +53,4 @@ Feature: Login Feature
     And User enter the password with a mix of uppercase and lowercase characters
     When user clicks on login button
     Then user should see "Incorrect email or password" error message.
+
