@@ -3,7 +3,7 @@ Feature: Signup Feature
   Background:
     Given user in TalentTEK Homepage
     And user click on Create New Account button
-@test
+@signupreg
   Scenario: User should be able to sign up with valid credentials
     And user enter valid first name
     And user enter valid last name
@@ -24,107 +24,111 @@ Feature: Signup Feature
     Then the user should be able to login successfully
 
 #  # Scenario: firstname and lastname test cases
-#
-#  # alphanumeric credentials
-#  Scenario: User should not be able to sign up with alphanumeric credentials in first name field
-#    And user enter alphanumeric first name
-#    And user enter valid last name
-#    And user enter valid email address
-#    And user enter valid password
-#    And user enter valid confirm password
-#    And user enter their month as "May" under dob
-#    And user enter their day as "20" under dob
-#    And user enter their year as "1995" under dob
-#    And user select gender
-#    And user click the term and condition policy
-#    And user click on Create my Account button
-#    Then the user should receive "First name and last name cannot contain numeric or special characters" error.
-#
-#  Scenario: User should not be able to sign up with alphanumeric credentials in last name field
-#    And user enter valid first name
-#    And user enter alphanumeric last name
-#    And user enter valid email address
-#    And user enter valid password
-#    And user enter valid confirm password
-#    And user enter their month as "May" under dob
-#    And user enter their day as "20" under dob
-#    And user enter their year as "1995" under dob
-#    And user select gender
-#    And user click the term and condition policy
-#    And user click on Create my Account button
-#    Then the user should receive "First name and last name cannot contain numeric or special characters" error.
-#
-#  Scenario: User should not be able to sign up with alphanumeric credentials in last name and first name field
-#    And user enter alphanumeric first name
-#    And user enter alphanumeric last name
-#    And user enter valid email address
-#    And user enter valid password
-#    And user enter valid confirm password
-#    And user enter their month as "May" under dob
-#    And user enter their day as "20" under dob
-#    And user enter their year as "1995" under dob
-#    And user select gender
-#    And user click the term and condition policy
-#    And user click on Create my Account button
-#    Then the user should receive "First name and last name cannot contain numeric or special characters" error.
-#
-#    #numeric credentials
-#  Scenario: User should not be able to sign up with numeric credentials in first name field
-#    And user enter numeric first name
-#    And user enter valid last name
-#    And user enter valid email address
-#    And user enter valid password
-#    And user enter valid confirm password
-#    And user enter their month as "May" under dob
-#    And user enter their day as "20" under dob
-#    And user enter their year as "1995" under dob
-#    And user select gender
-#    And user click the term and condition policy
-#    And user click on Create my Account button
-#    Then the user should receive "First name and last name cannot contain numeric or special characters" error.
-#
-#  Scenario: User should not be able to sign up with numeric credentials in last name field
-#    And user enter valid first name
-#    And user enter numeric last name
-#    And user enter valid email address
-#    And user enter valid password
-#    And user enter valid confirm password
-#    And user enter their month as "May" under dob
-#    And user enter their day as "20" under dob
-#    And user enter their year as "1995" under dob
-#    And user select gender
-#    And user click the term and condition policy
-#    And user click on Create my Account button
-#    Then the user should receive "First name and last name cannot contain numeric or special characters" error.
-#
-#  Scenario: User should not be able to sign up with numeric credentials in last name and first name field
-#    And user enter numeric first name
-#    And user enter numeric last name
-#    And user enter valid email address
-#    And user enter valid password
-#    And user enter valid confirm password
-#    And user enter their month as "May" under dob
-#    And user enter their day as "20" under dob
-#    And user enter their year as "1995" under dob
-#    And user select gender
-#    And user click the term and condition policy
-#    And user click on Create my Account button
-#    Then the user should receive "First name and last name cannot contain numeric or special characters" error.
-#
+
+  # alphanumeric credentials
+  @signupreg
+  Scenario: User should not be able to sign up with alphanumeric credentials in first name field
+    And user enter alphanumeric first name
+    And user enter valid last name
+    And user enter new valid email address
+    And user enter new valid password
+    And user enter valid confirm password
+    And user enter their month as "May" under dob
+    And user enter their day as "20" under dob
+    And user enter their year as "1995" under dob
+    And user select gender
+    And user click the term and condition policy
+    When user click on Create my Account button
+    Then the user should receive First name and last name cannot contain numeric or special characters error.
+  @signupreg
+  Scenario: User should not be able to sign up with alphanumeric credentials in last name field
+    And user enter valid first name
+    And user enter alphanumeric last name
+    And user enter new valid email address
+    And user enter new valid password
+    And user enter valid confirm password
+    And user enter their month as "May" under dob
+    And user enter their day as "20" under dob
+    And user enter their year as "1995" under dob
+    And user select gender
+    And user click the term and condition policy
+    When user click on Create my Account button
+    Then the user should receive First name and last name cannot contain numeric or special characters error.
+  @signupreg
+  Scenario: User should not be able to sign up with alphanumeric credentials in last name and first name field
+    And user enter alphanumeric first name
+    And user enter alphanumeric last name
+    And user enter new valid email address
+    And user enter new valid password
+    And user enter valid confirm password
+    And user enter their month as "May" under dob
+    And user enter their day as "20" under dob
+    And user enter their year as "1995" under dob
+    And user select gender
+    And user click the term and condition policy
+    When user click on Create my Account button
+    Then the user should receive First name and last name cannot contain numeric or special characters error.
+
+    #numeric credentials
+  @signupreg
+  Scenario: User should not be able to sign up with numeric credentials in first name field
+    And user enter numeric first name
+    And user enter valid last name
+    And user enter new valid email address
+    And user enter new valid password
+    And user enter valid confirm password
+    And user enter their month as "May" under dob
+    And user enter their day as "20" under dob
+    And user enter their year as "1995" under dob
+    And user select gender
+    And user click the term and condition policy
+    When user click on Create my Account button
+    Then the user should receive First name and last name cannot contain numeric or special characters error.
+
+  @signupreg
+  Scenario: User should not be able to sign up with numeric credentials in last name field
+    And user enter valid first name
+    And user enter numeric last name
+    And user enter new valid email address
+    And user enter new valid password
+    And user enter valid confirm password
+    And user enter their month as "May" under dob
+    And user enter their day as "20" under dob
+    And user enter their year as "1995" under dob
+    And user select gender
+    And user click the term and condition policy
+    And user click on Create my Account button
+    Then the user should receive First name and last name cannot contain numeric or special characters error.
+  @signupreg
+  Scenario: User should not be able to sign up with numeric credentials in last name and first name field
+    And user enter numeric first name
+    And user enter numeric last name
+    And user enter new valid email address
+    And user enter new valid password
+    And user enter valid confirm password
+    And user enter their month as "May" under dob
+    And user enter their day as "20" under dob
+    And user enter their year as "1995" under dob
+    And user select gender
+    And user click the term and condition policy
+    And user click on Create my Account button
+    Then the user should receive First name and last name cannot contain numeric or special characters error.
+
 #    #field empty
-#  Scenario: User should not be able to sign up with empty field in first name field
-#    And user leaves first name field empty
-#    And user enter valid last name
-#    And user enter valid email address
-#    And user enter valid password
-#    And user enter valid confirm password
-#    And user enter their month as "May" under dob
-#    And user enter their day as "20" under dob
-#    And user enter their year as "1995" under dob
-#    And user select gender
-#    And user click the term and condition policy
-#    And user click on Create my Account button
-#    Then User should see "Please fill out field." message.
+  @signupreg
+  Scenario: User should not be able to sign up with empty field in first name field
+    And user leaves first name field empty
+    And user enter valid last name
+    And user enter email address
+    And user enter password
+    And user enter confirm password
+    And user enter their month as "May" under dob
+    And user enter their day as "20" under dob
+    And user enter their year as "1995" under dob
+    And user select gender
+    And user click the term and condition policy
+    And user click on Create my Account button
+    Then User should see Please fill out field message.
 #
 #  Scenario: User should not be able to sign up with empty field in first name field
 #    And user enter valid first name

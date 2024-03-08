@@ -1,6 +1,7 @@
 package stepDef;
 
 import base.config;
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -11,6 +12,7 @@ import org.testng.Assert;
 
 public class loginSteps extends config {
 
+    Faker faker = new Faker();
     @Given("user in TalentTEK Homepage")
     public void userInTalentTEKHomepage() {
         //SELENIUM CODES
@@ -88,6 +90,7 @@ public class loginSteps extends config {
     public void userShouldSeeMessage(String arg0) {
         driver.switchTo().alert().getText();
     }
+
 
 }
 

@@ -106,6 +106,63 @@ public class signupSteps extends config {
     public void studentClicksOnLoginButton() {
         driver.findElement(By.xpath("//input[@class='my-login']")).click();
     }
+
+    @And("user enter alphanumeric first name")
+    public void userEnterAlphanumericFirstName() {
+        STUDENT_FIRST_NAME = faker.name().firstName();
+        STUDENT_NAME_NUMARIC= STUDENT_FIRST_NAME+faker.number().digits(5);
+        driver.findElement(By.name("firstName")).sendKeys(STUDENT_NAME_NUMARIC);
+    }
+
+    @Then("the user should receive First name and last name cannot contain numeric or special characters error.")
+    public void theUserShouldReceiveFirstNameAndLastNameCannotContainNumericOrSpecialCharactersError() {
+        driver.findElement(By.id("error-msg"));
+    }
+
+    @And("user enter alphanumeric last name")
+    public void userEnterAlphanumericLastName() {
+        STUDENT_LAST_NAME = faker.name().firstName();
+        STUDENT_NAME_NUMARIC= STUDENT_LAST_NAME+faker.number().digits(5);
+        driver.findElement(By.name("lastName")).sendKeys(STUDENT_NAME_NUMARIC);
+    }
+
+    @And("user enter numeric first name")
+    public void userEnterNumericFirstName() {
+        STUDENT_FIRST_NAME = faker.number().digits(6);
+        driver.findElement(By.name("firstName")).sendKeys(STUDENT_FIRST_NAME);
+    }
+    @And("user enter numeric last name")
+    public void userEnterNumericLastName() {
+        STUDENT_LAST_NAME= faker.number().digits(6);
+        driver.findElement(By.name("lastName")).sendKeys(STUDENT_LAST_NAME);
+    }
+
+    @And("user leaves first name field empty")
+    public void userLeavesFirstNameFieldEmpty() {
+        driver.findElement(By.name("firstName")).sendKeys("");
+    }
+
+    @Then("User should see Please fill out field message.")
+    public void userShouldSeePleaseFillOutFieldMessage() {
+        driver.switchTo().alert().getText();
+    }
+
+    @And("user enter email address")
+    public void userEnterEmailAddress() {
+        STUDENT_EMAIL = faker.name().firstName().toLowerCase()+faker.number().digits(2)+"@taltektc.com";
+        driver.findElement(By.name("email")).sendKeys(STUDENT_EMAIL);
+    }
+
+    @And("user enter password")
+    public void userEnterPassword() {
+        STUDENT_PASSWORD = faker.number().digits(6);
+        driver.findElement(By.name("password")).sendKeys(STUDENT_PASSWORD);
+    }
+
+    @And("user enter confirm password")
+    public void userEnterConfirmPassword() {
+        driver.findElement(By.name("confirmPassword")).sendKeys(STUDENT_PASSWORD);
+    }
 }
 
 

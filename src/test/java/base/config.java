@@ -17,8 +17,10 @@ public class config {
     public static String STUDENT_LAST_NAME;
     public static String STUDENT_RANDOM_EMAIL;
     public static String RANDOM_PASSWORD;
-
     public static String STUDENT_RANDOM_ID;
+    public static String STUDENT_NAME_NUMARIC;
+
+
     public static WebDriver setupBrowser (String driverType){
         if(driverType.equalsIgnoreCase("ch")){
             driver = new ChromeDriver();
