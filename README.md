@@ -19,6 +19,7 @@ we Git account - to store code
 cucumber-testng
 cucumber-java
 selenium-java
+javafaker
 
 # Plugins in IntelliJ
 Cucumber for Java
@@ -29,7 +30,7 @@ TBD - TO BE DECIDED
 
 # RUN OPTIONS
 Clone the project
-To run in parallel use command: mvn verify -Denv=qa -Dbrowser=ch -Dcucumber.filter.tags=@smoke  or mvn verify -Denv=qa -Dbrowser=ch -D"cucumber.filter.tags=@test"
+To run in parallel use command: mvn verify -Denv=qa -Dbrowser=ch -Dcucumber.filter.tags=@smoke  or mvn verify -Denv=qa -Dbrowser=ch -D"cucumber.filter.tags=@regression"
 To run in single use flag -Dthreads=single; mvn clean verify -Dthreads=single
 To exclude a specific tag use 'not' with tag name i.e. mvn clean verify -Denv=qa -Dbrowser=chrome -Dcucumber.filter.tags="not @ignore"
 To post results to JIRA use flag -DPostResultsToJira=true

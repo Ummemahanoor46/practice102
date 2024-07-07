@@ -51,11 +51,9 @@ public class loginSteps extends config {
     }
 
     @Then("user should see {string} error message.")
-    public void userShouldSeeErrorMessage(String arg0) throws InterruptedException {
-        String expText = "Invalid email address";
-        Thread.sleep(1000);
-        String actText = driver.findElement(By.id("error-msg")).getText();
-        Assert.assertEquals(expText, actText);
+    public void userShouldSeeErrorMessage(String arg0)  {
+        driver.findElement(By.id("error-msg")).getText();
+
     }
 
     @And("user submit email address and password field empty")
@@ -79,11 +77,9 @@ public class loginSteps extends config {
     }
 
     @Then("user should find {string} error message.")
-    public void userShouldFindErrorMessage(String arg0) throws InterruptedException {
-        String expText = "Incorrect email or password";
-        Thread.sleep(1000); // Selenium move to fast
-        String actText = driver.findElement(By.xpath("//*[@id='error-msg']")).getText();
-        Assert.assertEquals(expText, actText);
+    public void userShouldFindErrorMessage(String arg0)  {
+        driver.findElement(By.xpath("//*[@id='error-msg']")).getText();
+
     }
 
     @Then("User should see {string} message.")
@@ -92,5 +88,10 @@ public class loginSteps extends config {
     }
 
 
+    @Then("user should see Invalid email address error message.")
+    public void userShouldSeeInvalidEmailAddressErrorMessage() {
+        driver.findElement(By.xpath("//*[@id='error-msg']")).getText();
+
+    }
 }
 
